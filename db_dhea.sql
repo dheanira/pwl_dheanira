@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2021 at 02:42 PM
+-- Generation Time: Mar 23, 2022 at 03:57 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -24,14 +24,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `idlogin` varchar(10) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`idlogin`, `username`, `password`) VALUES
+('1', 'dheanira', 'dheanira');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
   `nim` varchar(16) NOT NULL,
   `nama` varchar(50) NOT NULL,
+  `jenis` varchar(15) NOT NULL,
+  `alamat` varchar(100) NOT NULL,
   `tempatlahir` varchar(50) NOT NULL,
   `tanggallahir` date NOT NULL,
+  `pend` varchar(10) NOT NULL,
   `jurusan` varchar(50) NOT NULL,
   `fakultas` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,13 +62,20 @@ CREATE TABLE `mahasiswa` (
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`nim`, `nama`, `tempatlahir`, `tanggallahir`, `jurusan`, `fakultas`) VALUES
-('18083000120', 'Dheanira Sonya Shanty', 'Malang', '1999-10-12', 'S1 Sistem Informasi', 'Fakultas Teknologi Informasi'),
-('18084000299', 'Adora', 'Lampung', '2021-09-26', 'Teknik Sipil', 'Fakultas Teknik');
+INSERT INTO `mahasiswa` (`nim`, `nama`, `jenis`, `alamat`, `tempatlahir`, `tanggallahir`, `pend`, `jurusan`, `fakultas`) VALUES
+('', '', '', '', '', '0000-00-00', '', '', ''),
+('18083000082', 'Nuzud Nur Jamilah', 'Perempuan', 'Kepanjen', 'Malang', '2000-02-20', 'SD, SMP, S', 'S1 Sistem Informasi', 'Fakultas Teknologi Informasi'),
+('18083000120', 'Dheanira', 'Perempuan', ' Pakisaji ', 'Malang', '1999-03-16', 'SD, SMP, S', 'S1 Sistem Informasi', 'Fakultas Psikologi');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`idlogin`);
 
 --
 -- Indexes for table `mahasiswa`

@@ -13,7 +13,7 @@
               <h1><center>DATA MAHASISWA</center></h1>
               <div>
               <center>
-              <a class="btn btn-success" href="tambah.php">Tambah Data</a>
+              <a class="btn btn-success" href="form_tambah.php">Tambah Data</a>
               <a class="btn btn-danger" href="logout.php">Log Out</a>
               </center>
               </div>
