@@ -1,5 +1,13 @@
 User-agent: *
 
+Disallow:/cgi-Bin
+
+Disallow: /wp-admin
+
+Disallow: /wp-includes
+
+Disallow: /wp-content
+
 User-agent: Bingbot
 
 Disallow: /
